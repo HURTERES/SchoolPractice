@@ -71,6 +71,7 @@
             this.BtnTakeBook.TabIndex = 2;
             this.BtnTakeBook.Text = "Взять книгу";
             this.BtnTakeBook.UseVisualStyleBackColor = true;
+            this.BtnTakeBook.Click += new System.EventHandler(this.BtnTakeBook_Click);
             // 
             // button1
             // 
@@ -114,6 +115,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

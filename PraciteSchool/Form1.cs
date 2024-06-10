@@ -22,5 +22,11 @@ namespace PraciteSchool
             FormLibrarian Frm = new FormLibrarian();
             Frm.ShowDialog();
         }
+
+        private void BtnTakeBook_Click(object sender, EventArgs e)
+        {
+            FormTakeBook Frm = new FormTakeBook();
+            Frm.ShowDialog();
+        }
     }
 }

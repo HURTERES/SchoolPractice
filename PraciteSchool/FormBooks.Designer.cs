@@ -113,6 +113,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.DgvBooks);
             this.Name = "FormBooks";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormBooks";
             ((System.ComponentModel.ISupportInitialize)(this.DgvBooks)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
