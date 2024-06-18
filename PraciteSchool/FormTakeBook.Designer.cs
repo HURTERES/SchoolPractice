@@ -28,22 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.DgvBooks = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdBook = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Author = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DatePublish = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.BtnTakeCurrent = new System.Windows.Forms.Button();
             this.PanelTake = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.TbxNumClass = new System.Windows.Forms.RichTextBox();
+            this.BtnAccept = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.TbxFIO = new System.Windows.Forms.RichTextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.TbxNumClass = new System.Windows.Forms.RichTextBox();
+            this.BsBooks = new System.Windows.Forms.BindingSource(this.components);
+            this.practice_Library2024DataSet = new PraciteSchool.Practice_Library2024DataSet();
+            this.bookTableAdapter = new PraciteSchool.Practice_Library2024DataSetTableAdapters.BookTableAdapter();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.DgvBooks)).BeginInit();
             this.PanelTake.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BsBooks)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.practice_Library2024DataSet)).BeginInit();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,50 +78,78 @@
             this.DgvBooks.AllowUserToResizeRows = false;
             this.DgvBooks.BackgroundColor = System.Drawing.Color.White;
             this.DgvBooks.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.SeaShell;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Palatino Linotype", 14F);
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvBooks.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Bisque;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Palatino Linotype", 14F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Bisque;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvBooks.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.DgvBooks.ColumnHeadersHeight = 30;
             this.DgvBooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.DgvBooks.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1});
+            this.IdBook,
+            this.Title,
+            this.Author,
+            this.DatePublish});
             this.DgvBooks.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Comic Sans MS", 14.25F);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DgvBooks.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Comic Sans MS", 14.25F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Bisque;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DgvBooks.DefaultCellStyle = dataGridViewCellStyle5;
             this.DgvBooks.EnableHeadersVisualStyles = false;
             this.DgvBooks.GridColor = System.Drawing.Color.White;
             this.DgvBooks.Location = new System.Drawing.Point(8, 32);
+            this.DgvBooks.MultiSelect = false;
             this.DgvBooks.Name = "DgvBooks";
             this.DgvBooks.ReadOnly = true;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvBooks.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvBooks.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.DgvBooks.RowHeadersVisible = false;
+            this.DgvBooks.RowTemplate.Height = 30;
             this.DgvBooks.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvBooks.Size = new System.Drawing.Size(698, 392);
             this.DgvBooks.TabIndex = 38;
+            this.DgvBooks.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvBooks_CellClick);
             // 
-            // Column1
+            // IdBook
             // 
-            this.Column1.HeaderText = "Column1";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
+            this.IdBook.HeaderText = "IdBook";
+            this.IdBook.Name = "IdBook";
+            this.IdBook.ReadOnly = true;
+            this.IdBook.Visible = false;
+            // 
+            // Title
+            // 
+            this.Title.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Title.HeaderText = "Название";
+            this.Title.Name = "Title";
+            this.Title.ReadOnly = true;
+            // 
+            // Author
+            // 
+            this.Author.HeaderText = "Автор";
+            this.Author.Name = "Author";
+            this.Author.ReadOnly = true;
+            this.Author.Width = 180;
+            // 
+            // DatePublish
+            // 
+            this.DatePublish.HeaderText = "Публикация";
+            this.DatePublish.Name = "DatePublish";
+            this.DatePublish.ReadOnly = true;
+            this.DatePublish.Width = 140;
             // 
             // label2
             // 
@@ -122,18 +163,21 @@
             // 
             // BtnTakeCurrent
             // 
+            this.BtnTakeCurrent.BackColor = System.Drawing.SystemColors.Window;
+            this.BtnTakeCurrent.Enabled = false;
             this.BtnTakeCurrent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnTakeCurrent.Font = new System.Drawing.Font("Palatino Linotype", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.BtnTakeCurrent.Location = new System.Drawing.Point(736, 52);
             this.BtnTakeCurrent.Name = "BtnTakeCurrent";
             this.BtnTakeCurrent.Size = new System.Drawing.Size(322, 45);
             this.BtnTakeCurrent.TabIndex = 40;
-            this.BtnTakeCurrent.Text = "Взять выбранную";
-            this.BtnTakeCurrent.UseVisualStyleBackColor = true;
+            this.BtnTakeCurrent.Text = "Взять выбранную книгу";
+            this.BtnTakeCurrent.UseVisualStyleBackColor = false;
             this.BtnTakeCurrent.Click += new System.EventHandler(this.BtnTakeCurrent_Click);
             // 
             // PanelTake
             // 
+            this.PanelTake.Controls.Add(this.BtnAccept);
             this.PanelTake.Controls.Add(this.panel2);
             this.PanelTake.Controls.Add(this.TbxFIO);
             this.PanelTake.Controls.Add(this.panel1);
@@ -143,27 +187,22 @@
             this.PanelTake.Controls.Add(this.DgvBooks);
             this.PanelTake.Location = new System.Drawing.Point(12, 85);
             this.PanelTake.Name = "PanelTake";
-            this.PanelTake.Size = new System.Drawing.Size(1078, 446);
+            this.PanelTake.Size = new System.Drawing.Size(1069, 434);
             this.PanelTake.TabIndex = 41;
             // 
-            // panel1
+            // BtnAccept
             // 
-            this.panel1.Location = new System.Drawing.Point(736, 165);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(322, 2);
-            this.panel1.TabIndex = 42;
-            // 
-            // TbxNumClass
-            // 
-            this.TbxNumClass.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TbxNumClass.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TbxNumClass.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.TbxNumClass.Location = new System.Drawing.Point(740, 133);
-            this.TbxNumClass.Name = "TbxNumClass";
-            this.TbxNumClass.Size = new System.Drawing.Size(318, 34);
-            this.TbxNumClass.TabIndex = 41;
-            this.TbxNumClass.Text = "Введите класс";
-            this.TbxNumClass.Visible = false;
+            this.BtnAccept.BackColor = System.Drawing.Color.LightGreen;
+            this.BtnAccept.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAccept.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.BtnAccept.Location = new System.Drawing.Point(813, 275);
+            this.BtnAccept.Name = "BtnAccept";
+            this.BtnAccept.Size = new System.Drawing.Size(178, 41);
+            this.BtnAccept.TabIndex = 45;
+            this.BtnAccept.Text = "Подтвердить";
+            this.BtnAccept.UseVisualStyleBackColor = false;
+            this.BtnAccept.Visible = false;
+            this.BtnAccept.Click += new System.EventHandler(this.BtnAccept_Click);
             // 
             // panel2
             // 
@@ -183,6 +222,63 @@
             this.TbxFIO.TabIndex = 43;
             this.TbxFIO.Text = "Введите ФИО";
             this.TbxFIO.Visible = false;
+            this.TbxFIO.Enter += new System.EventHandler(this.TbxFIO_Enter);
+            this.TbxFIO.Leave += new System.EventHandler(this.TbxFIO_Leave);
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(736, 165);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(322, 2);
+            this.panel1.TabIndex = 42;
+            // 
+            // TbxNumClass
+            // 
+            this.TbxNumClass.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TbxNumClass.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TbxNumClass.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.TbxNumClass.Location = new System.Drawing.Point(740, 133);
+            this.TbxNumClass.Name = "TbxNumClass";
+            this.TbxNumClass.Size = new System.Drawing.Size(318, 34);
+            this.TbxNumClass.TabIndex = 41;
+            this.TbxNumClass.Text = "Введите класс";
+            this.TbxNumClass.Visible = false;
+            this.TbxNumClass.Enter += new System.EventHandler(this.TbxNumClass_Enter);
+            this.TbxNumClass.Leave += new System.EventHandler(this.TbxNumClass_Leave);
+            // 
+            // BsBooks
+            // 
+            this.BsBooks.DataMember = "Book";
+            this.BsBooks.DataSource = this.practice_Library2024DataSet;
+            // 
+            // practice_Library2024DataSet
+            // 
+            this.practice_Library2024DataSet.DataSetName = "Practice_Library2024DataSet";
+            this.practice_Library2024DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // bookTableAdapter
+            // 
+            this.bookTableAdapter.ClearBeforeFill = true;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Bisque;
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.pictureBox1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1093, 79);
+            this.panel3.TabIndex = 43;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Bisque;
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel4.Location = new System.Drawing.Point(0, 525);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1093, 10);
+            this.panel4.TabIndex = 44;
             // 
             // pictureBox1
             // 
@@ -193,6 +289,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 42;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // FormTakeBook
             // 
@@ -200,18 +297,22 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1093, 535);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.PanelTake);
-            this.Controls.Add(this.label1);
             this.Name = "FormTakeBook";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormTakeBook";
+            this.Load += new System.EventHandler(this.FormTakeBook_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DgvBooks)).EndInit();
             this.PanelTake.ResumeLayout(false);
             this.PanelTake.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BsBooks)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.practice_Library2024DataSet)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -219,7 +320,6 @@
 
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.DataGridView DgvBooks;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button BtnTakeCurrent;
         private System.Windows.Forms.Panel PanelTake;
@@ -228,5 +328,15 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.RichTextBox TbxNumClass;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.BindingSource BsBooks;
+        private Practice_Library2024DataSet practice_Library2024DataSet;
+        private Practice_Library2024DataSetTableAdapters.BookTableAdapter bookTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdBook;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Title;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Author;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DatePublish;
+        private System.Windows.Forms.Button BtnAccept;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
     }
 }

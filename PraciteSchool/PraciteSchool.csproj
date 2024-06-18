@@ -58,6 +58,12 @@
     <Compile Include="FormBooks.Designer.cs">
       <DependentUpon>FormBooks.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormInforation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInforation.Designer.cs">
+      <DependentUpon>FormInforation.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLibrarian.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +76,11 @@
     <Compile Include="FormTakeBook.Designer.cs">
       <DependentUpon>FormTakeBook.cs</DependentUpon>
     </Compile>
+    <Compile Include="Practice_Library2024DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Practice_Library2024DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -77,6 +88,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormBooks.resx">
       <DependentUpon>FormBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInforation.resx">
+      <DependentUpon>FormInforation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLibrarian.resx">
       <DependentUpon>FormLibrarian.cs</DependentUpon>
@@ -94,6 +108,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Practice_Library2024DataSet.xsc">
+      <DependentUpon>Practice_Library2024DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Practice_Library2024DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Practice_Library2024DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Practice_Library2024DataSet.xss">
+      <DependentUpon>Practice_Library2024DataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -124,6 +149,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Escape.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NoteIt.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

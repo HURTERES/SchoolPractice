@@ -26,7 +26,9 @@ namespace PraciteSchool
         private void BtnTakeBook_Click(object sender, EventArgs e)
         {
             FormTakeBook Frm = new FormTakeBook();
+            this.Hide();
             Frm.ShowDialog();
+            this.Show();
         }
     }
 }
