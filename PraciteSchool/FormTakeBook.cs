@@ -8,6 +8,7 @@ using System.Drawing;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -47,7 +48,7 @@ namespace PraciteSchool
         }
 
 
-        string TxtCon = "Data Source=213.155.192.79,3002;Initial Catalog=Practice_Library2024;Persist Security Info=True;User ID=u22vasiltsov;Password=etz7";
+        public static string TxtCon = "Data Source=213.155.192.79,3002;Initial Catalog=Practice_Library2024;Persist Security Info=True;User ID=u22vasiltsov;Password=etz7";
         private void FormTakeBook_Load(object sender, EventArgs e)
         {
             SqlConnection Con = new SqlConnection(TxtCon);
@@ -63,11 +64,11 @@ namespace PraciteSchool
 
         }
 
-        public static string IdBook1, Title1, Author1, DatePublish1;
+        string IdBook1, Title1, Author1, DatePublish1;
 
         private void TbxNumClass_Leave(object sender, EventArgs e)
         {
-            if (TbxNumClass.Text == "")
+            if (TbxNumClass.Text.Trim() == "")
                 TbxNumClass.Text = "Введите класс";
         }
 
@@ -80,7 +81,7 @@ namespace PraciteSchool
 
         private void TbxFIO_Leave(object sender, EventArgs e)
         {
-            if (TbxFIO.Text =="")
+            if (TbxFIO.Text.Trim() =="")
                 TbxFIO.Text = "Введите ФИО";
         }
 
@@ -161,7 +162,9 @@ namespace PraciteSchool
                 }
 
                 FormInforation Frm = new FormInforation();
+                Frm.LblInformation.Text = "Вы можете забрать книгу в библиотеке в течение следующих 5 рабочих дней.";
                 Frm.ShowDialog();
+                Thread.Sleep(1000);
                 this.Close();
             }
         }

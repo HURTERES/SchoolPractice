@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.DgvBooks = new System.Windows.Forms.DataGridView();
             this.IdBook = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,8 +50,8 @@
             this.practice_Library2024DataSet = new PraciteSchool.Practice_Library2024DataSet();
             this.bookTableAdapter = new PraciteSchool.Practice_Library2024DataSetTableAdapters.BookTableAdapter();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel4 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.DgvBooks)).BeginInit();
             this.PanelTake.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BsBooks)).BeginInit();
@@ -76,16 +76,19 @@
             this.DgvBooks.AllowUserToDeleteRows = false;
             this.DgvBooks.AllowUserToResizeColumns = false;
             this.DgvBooks.AllowUserToResizeRows = false;
+            this.DgvBooks.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.DgvBooks.BackgroundColor = System.Drawing.Color.White;
             this.DgvBooks.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Bisque;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Palatino Linotype", 14F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Bisque;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvBooks.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Bisque;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Palatino Linotype", 14F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Bisque;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvBooks.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DgvBooks.ColumnHeadersHeight = 30;
             this.DgvBooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.DgvBooks.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -94,28 +97,28 @@
             this.Author,
             this.DatePublish});
             this.DgvBooks.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Comic Sans MS", 14.25F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Bisque;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DgvBooks.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Comic Sans MS", 14.25F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Bisque;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DgvBooks.DefaultCellStyle = dataGridViewCellStyle2;
             this.DgvBooks.EnableHeadersVisualStyles = false;
             this.DgvBooks.GridColor = System.Drawing.Color.White;
-            this.DgvBooks.Location = new System.Drawing.Point(8, 32);
+            this.DgvBooks.Location = new System.Drawing.Point(368, 39);
             this.DgvBooks.MultiSelect = false;
             this.DgvBooks.Name = "DgvBooks";
             this.DgvBooks.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvBooks.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvBooks.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.DgvBooks.RowHeadersVisible = false;
             this.DgvBooks.RowTemplate.Height = 30;
             this.DgvBooks.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -155,7 +158,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Palatino Linotype", 16F);
-            this.label2.Location = new System.Drawing.Point(18, 0);
+            this.label2.Location = new System.Drawing.Point(363, 7);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(304, 29);
             this.label2.TabIndex = 39;
@@ -167,7 +170,7 @@
             this.BtnTakeCurrent.Enabled = false;
             this.BtnTakeCurrent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnTakeCurrent.Font = new System.Drawing.Font("Palatino Linotype", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.BtnTakeCurrent.Location = new System.Drawing.Point(736, 52);
+            this.BtnTakeCurrent.Location = new System.Drawing.Point(12, 83);
             this.BtnTakeCurrent.Name = "BtnTakeCurrent";
             this.BtnTakeCurrent.Size = new System.Drawing.Size(322, 45);
             this.BtnTakeCurrent.TabIndex = 40;
@@ -177,6 +180,9 @@
             // 
             // PanelTake
             // 
+            this.PanelTake.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.PanelTake.Controls.Add(this.BtnAccept);
             this.PanelTake.Controls.Add(this.panel2);
             this.PanelTake.Controls.Add(this.TbxFIO);
@@ -195,7 +201,7 @@
             this.BtnAccept.BackColor = System.Drawing.Color.LightGreen;
             this.BtnAccept.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnAccept.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.BtnAccept.Location = new System.Drawing.Point(813, 275);
+            this.BtnAccept.Location = new System.Drawing.Point(89, 306);
             this.BtnAccept.Name = "BtnAccept";
             this.BtnAccept.Size = new System.Drawing.Size(178, 41);
             this.BtnAccept.TabIndex = 45;
@@ -206,7 +212,7 @@
             // 
             // panel2
             // 
-            this.panel2.Location = new System.Drawing.Point(736, 219);
+            this.panel2.Location = new System.Drawing.Point(12, 250);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(322, 2);
             this.panel2.TabIndex = 44;
@@ -216,7 +222,7 @@
             this.TbxFIO.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TbxFIO.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.TbxFIO.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.TbxFIO.Location = new System.Drawing.Point(740, 187);
+            this.TbxFIO.Location = new System.Drawing.Point(16, 218);
             this.TbxFIO.Name = "TbxFIO";
             this.TbxFIO.Size = new System.Drawing.Size(318, 34);
             this.TbxFIO.TabIndex = 43;
@@ -227,7 +233,7 @@
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(736, 165);
+            this.panel1.Location = new System.Drawing.Point(12, 196);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(322, 2);
             this.panel1.TabIndex = 42;
@@ -237,7 +243,7 @@
             this.TbxNumClass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TbxNumClass.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.TbxNumClass.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.TbxNumClass.Location = new System.Drawing.Point(740, 133);
+            this.TbxNumClass.Location = new System.Drawing.Point(16, 164);
             this.TbxNumClass.Name = "TbxNumClass";
             this.TbxNumClass.Size = new System.Drawing.Size(318, 34);
             this.TbxNumClass.TabIndex = 41;
@@ -271,15 +277,6 @@
             this.panel3.Size = new System.Drawing.Size(1093, 79);
             this.panel3.TabIndex = 43;
             // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.Bisque;
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 525);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1093, 10);
-            this.panel4.TabIndex = 44;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::PraciteSchool.Properties.Resources.Escape;
@@ -290,6 +287,15 @@
             this.pictureBox1.TabIndex = 42;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Bisque;
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel4.Location = new System.Drawing.Point(0, 525);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1093, 10);
+            this.panel4.TabIndex = 44;
             // 
             // FormTakeBook
             // 

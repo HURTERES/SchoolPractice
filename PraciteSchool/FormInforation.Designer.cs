@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.LblInformation = new System.Windows.Forms.Label();
             this.TimerClose = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -58,14 +58,14 @@
             this.pictureBox1.TabIndex = 43;
             this.pictureBox1.TabStop = false;
             // 
-            // label2
+            // LblInformation
             // 
-            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(129, 52);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(255, 133);
-            this.label2.TabIndex = 44;
-            this.label2.Text = "Вы можете забрать книгу в библиотеке в течение следующих 5 рабочих дней.";
+            this.LblInformation.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LblInformation.Location = new System.Drawing.Point(129, 52);
+            this.LblInformation.Name = "LblInformation";
+            this.LblInformation.Size = new System.Drawing.Size(255, 133);
+            this.LblInformation.TabIndex = 44;
+            this.LblInformation.Text = "Вы можете забрать книгу в библиотеке в течение следующих 5 рабочих дней.";
             // 
             // TimerClose
             // 
@@ -76,7 +76,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.LblInformation);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
@@ -106,8 +106,8 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Timer TimerClose;
         private System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.Label LblInformation;
     }
 }
