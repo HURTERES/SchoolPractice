@@ -28,28 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLibrarian));
             this.BtnShowStore = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.DgvBooks = new System.Windows.Forms.DataGridView();
-            this.BtnShowOnHands = new System.Windows.Forms.Button();
-            this.BtnShowNewBook = new System.Windows.Forms.Button();
-            this.BtnNewBook = new System.Windows.Forms.Button();
-            this.BtnAccept = new System.Windows.Forms.Button();
             this.IdBook = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Author = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DatePublish = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Publisher = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StoreWith = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BtnShowOnHands = new System.Windows.Forms.Button();
+            this.BtnShowNewBook = new System.Windows.Forms.Button();
+            this.BtnNewBook = new System.Windows.Forms.Button();
+            this.BtnAccept = new System.Windows.Forms.Button();
             this.LblNoWords = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvBooks)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvBooks)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnShowStore
@@ -86,6 +87,17 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Рабочее место библиотекаря";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::PraciteSchool.Properties.Resources.Escape;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(70, 54);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 42;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // DgvBooks
             // 
             this.DgvBooks.AllowUserToAddRows = false;
@@ -97,14 +109,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DgvBooks.BackgroundColor = System.Drawing.Color.White;
             this.DgvBooks.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Bisque;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Palatino Linotype", 14F);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Bisque;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvBooks.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Bisque;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Palatino Linotype", 14F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Bisque;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvBooks.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DgvBooks.ColumnHeadersHeight = 30;
             this.DgvBooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.DgvBooks.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -115,34 +127,77 @@
             this.Publisher,
             this.StoreWith});
             this.DgvBooks.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Comic Sans MS", 14.25F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Bisque;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DgvBooks.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Comic Sans MS", 14.25F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Bisque;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DgvBooks.DefaultCellStyle = dataGridViewCellStyle2;
             this.DgvBooks.EnableHeadersVisualStyles = false;
             this.DgvBooks.GridColor = System.Drawing.Color.White;
             this.DgvBooks.Location = new System.Drawing.Point(12, 134);
             this.DgvBooks.MultiSelect = false;
             this.DgvBooks.Name = "DgvBooks";
             this.DgvBooks.ReadOnly = true;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvBooks.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvBooks.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.DgvBooks.RowHeadersVisible = false;
             this.DgvBooks.RowTemplate.Height = 30;
             this.DgvBooks.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvBooks.Size = new System.Drawing.Size(1103, 431);
             this.DgvBooks.TabIndex = 53;
             this.DgvBooks.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvBooks_CellClick);
+            // 
+            // IdBook
+            // 
+            this.IdBook.HeaderText = "№ Книги";
+            this.IdBook.Name = "IdBook";
+            this.IdBook.ReadOnly = true;
+            this.IdBook.Width = 50;
+            // 
+            // Title
+            // 
+            this.Title.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Title.HeaderText = "Название";
+            this.Title.Name = "Title";
+            this.Title.ReadOnly = true;
+            // 
+            // Author
+            // 
+            this.Author.HeaderText = "Автор";
+            this.Author.Name = "Author";
+            this.Author.ReadOnly = true;
+            this.Author.Width = 180;
+            // 
+            // DatePublish
+            // 
+            this.DatePublish.HeaderText = "Публикация";
+            this.DatePublish.Name = "DatePublish";
+            this.DatePublish.ReadOnly = true;
+            this.DatePublish.Width = 140;
+            // 
+            // Publisher
+            // 
+            this.Publisher.HeaderText = "Издатель";
+            this.Publisher.Name = "Publisher";
+            this.Publisher.ReadOnly = true;
+            this.Publisher.Width = 160;
+            // 
+            // StoreWith
+            // 
+            this.StoreWith.HeaderText = "На руках у";
+            this.StoreWith.Name = "StoreWith";
+            this.StoreWith.ReadOnly = true;
+            this.StoreWith.Visible = false;
+            this.StoreWith.Width = 120;
             // 
             // BtnShowOnHands
             // 
@@ -199,49 +254,6 @@
             this.BtnAccept.Visible = false;
             this.BtnAccept.Click += new System.EventHandler(this.BtnAccept_Click);
             // 
-            // IdBook
-            // 
-            this.IdBook.HeaderText = "№ Книги";
-            this.IdBook.Name = "IdBook";
-            this.IdBook.ReadOnly = true;
-            this.IdBook.Width = 50;
-            // 
-            // Title
-            // 
-            this.Title.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Title.HeaderText = "Название";
-            this.Title.Name = "Title";
-            this.Title.ReadOnly = true;
-            // 
-            // Author
-            // 
-            this.Author.HeaderText = "Автор";
-            this.Author.Name = "Author";
-            this.Author.ReadOnly = true;
-            this.Author.Width = 180;
-            // 
-            // DatePublish
-            // 
-            this.DatePublish.HeaderText = "Публикация";
-            this.DatePublish.Name = "DatePublish";
-            this.DatePublish.ReadOnly = true;
-            this.DatePublish.Width = 140;
-            // 
-            // Publisher
-            // 
-            this.Publisher.HeaderText = "Издатель";
-            this.Publisher.Name = "Publisher";
-            this.Publisher.ReadOnly = true;
-            this.Publisher.Width = 160;
-            // 
-            // StoreWith
-            // 
-            this.StoreWith.HeaderText = "На руках у";
-            this.StoreWith.Name = "StoreWith";
-            this.StoreWith.ReadOnly = true;
-            this.StoreWith.Visible = false;
-            this.StoreWith.Width = 120;
-            // 
             // LblNoWords
             // 
             this.LblNoWords.Font = new System.Drawing.Font("Palatino Linotype", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -251,17 +263,6 @@
             this.LblNoWords.TabIndex = 58;
             this.LblNoWords.Text = "Нет удовлетворяющих записей";
             this.LblNoWords.Visible = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::PraciteSchool.Properties.Resources.Escape;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(70, 54);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 42;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // FormLibrarian
             // 
@@ -277,14 +278,15 @@
             this.Controls.Add(this.DgvBooks);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.BtnShowStore);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(1143, 661);
             this.Name = "FormLibrarian";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormLibrarian";
+            this.Text = "Библиотека";
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvBooks)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvBooks)).EndInit();
             this.ResumeLayout(false);
 
         }

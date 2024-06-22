@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTakeBook));
             this.label1 = new System.Windows.Forms.Label();
             this.DgvBooks = new System.Windows.Forms.DataGridView();
             this.IdBook = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -306,9 +307,10 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.PanelTake);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormTakeBook";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormTakeBook";
+            this.Text = "Библиотека";
             this.Load += new System.EventHandler(this.FormTakeBook_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DgvBooks)).EndInit();
             this.PanelTake.ResumeLayout(false);

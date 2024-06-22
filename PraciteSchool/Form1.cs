@@ -19,8 +19,7 @@ namespace PraciteSchool
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            FormLibrarian Frm = new FormLibrarian();
-            Frm.ShowDialog();
+            PanelLogin.Visible = true;
         }
 
         private void BtnTakeBook_Click(object sender, EventArgs e)
@@ -37,6 +36,26 @@ namespace PraciteSchool
             this.Hide();
             Frm.ShowDialog();
             this.Show();
+        }
+
+        private void Track_MouseUp(object sender, MouseEventArgs e)
+        {
+            LblPin.Text += Track.Value.ToString();
+            if (LblPin.Text == "322")
+            {
+                LblPin.Text ="";
+                PanelLogin.Visible = false;
+                Track.Value = 0;
+                FormLibrarian Frm = new FormLibrarian();
+                Frm.ShowDialog();
+            }
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            LblPin.Text = "";
+            PanelLogin.Visible = false;
+            Track.Value = 0;
         }
     }
 }

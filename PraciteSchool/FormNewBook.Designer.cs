@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNewBook));
             this.panel2 = new System.Windows.Forms.Panel();
             this.TbxTitle = new System.Windows.Forms.RichTextBox();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -43,8 +44,8 @@
             this.BtnAccept = new System.Windows.Forms.Button();
             this.Clock = new System.Windows.Forms.Timer(this.components);
             this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel5.SuspendLayout();
@@ -204,14 +205,6 @@
             this.panel5.Size = new System.Drawing.Size(864, 389);
             this.panel5.TabIndex = 59;
             // 
-            // panel6
-            // 
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Location = new System.Drawing.Point(51, 232);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(349, 2);
-            this.panel6.TabIndex = 59;
-            // 
             // panel7
             // 
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -219,6 +212,14 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(349, 2);
             this.panel7.TabIndex = 60;
+            // 
+            // panel6
+            // 
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Location = new System.Drawing.Point(51, 232);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(349, 2);
+            this.panel6.TabIndex = 59;
             // 
             // FormNewBook
             // 
@@ -228,9 +229,10 @@
             this.ClientSize = new System.Drawing.Size(870, 396);
             this.Controls.Add(this.panel5);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormNewBook";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormNewBook";
+            this.Text = "Библиотека";
             this.Shown += new System.EventHandler(this.FormNewBook_Shown);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
